@@ -1,0 +1,43 @@
+.card:nth-child(1) {
+  grid-area: left;
+}
+
+.card:nth-child(9) {
+  grid-area: right;
+}
+
+.card:nth-child(13) {
+  grid-area: left1;
+}
+
+.blogcontainer {
+  margin: 0% 2%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "left  left"
+    ". ."
+    ". . "
+    "right right"
+    ". ."
+    ". ."
+    "left1 left1";
+}
+
+@media (min-width: 796px) {
+  .blogcontainer {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "left left ."
+      "left left ."
+      ". . ."
+      ". right right"
+      ". right right"
+      ". . ."
+      "left1 left1 ."
+      "left1 left1 .";
+  }
+}
