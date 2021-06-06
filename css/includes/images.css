@@ -84,10 +84,7 @@ img {
 .card:nth-child(9n) .featuredAuthor,
 .card:nth-child(1) .featuredDate,
 .card:nth-child(13) .featuredDate,
-.card:nth-child(9n) .featuredDate,
-.card:nth-child(13) .call-to,
-.card:nth-child(1) .call-to,
-.card:nth-child(9n) .call-to {
+.card:nth-child(9n) .featuredDate {
   display: block;
 }
 
@@ -114,22 +111,8 @@ img {
 
 .black {
   background-color: black;
-  min-height: 150px;
-  width: 100%;
-  z-index: -2;
-  margin-top: -20px;
-}
-.black-bg {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(224, 236, 222, 1) 100%
-  );
-  height: 100%;
-  width: 100%;
-  z-index: -2;
-  margin-top: -20px;
+  color: white;
+  padding-top: 250px;
 }
 
 figure {

@@ -57,7 +57,7 @@ async function getPost(){
 function getContent(results, sliderNumber, number){
     sliderNumber.innerHTML=`<a href="html/blogpost.html?id=${results[number].id}">
                             <div class="slidercontent">
-                            <h3>${results[number].title.rendered}</h3>
+                             <h2>${results[number].title.rendered} </h2>
                             ${results[number].excerpt.rendered}
                             </div></a>`
     sliderNumber.style.backgroundImage=`url(${results[number]._embedded["wp:featuredmedia"][0].source_url})`;

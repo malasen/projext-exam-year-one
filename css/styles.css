@@ -1,6 +1,6 @@
-@import "/css/includes/typography.css";
-@import "/css/includes/images.css";
-@import "/css/includes/layout-blog.css";
+@import "./includes/typography.css";
+@import "./includes/images.css";
+@import "./includes/layout-blog.css";
 
 body {
   margin: 0% 0%;
@@ -87,11 +87,8 @@ button:hover {
 }
 
 .call-to {
-  position: absolute;
   border-radius: 5px;
   width: 150px;
-  top: 25px;
-  right: 15px;
 }
 .call-to:hover {
   background-color: rgba(255, 255, 255, 0.335);
@@ -313,6 +310,8 @@ textarea {
 
 footer {
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 5px;
   min-height: 50px;
   z-index: -1;
 }

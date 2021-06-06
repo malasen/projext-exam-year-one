@@ -27,9 +27,10 @@ async function getPost(){
     try {
         const response = await fetch(postsUrl);
         const results = await response.json();
+        console.log(results);
 
         loader.style.display="none";
-        postsContainer.innerHTML +="<h2>"+ results.title.rendered + "</h2>"+ results.content.rendered;
+        postsContainer.innerHTML +=" <h1>"+ results.title.rendered + " </h1>"+ results.content.rendered;
         titleUpdate.innerHTML = "Blog | " + results.title.rendered;
 
         const img = document.querySelector(".postcontainer img");
@@ -40,7 +41,8 @@ async function getPost(){
         img.onclick = function() {
             processedSrc = "https" + img.src.slice(4)
             modal.style.display = "block";
-            modalImg.src = processedSrc;  
+            modalImg.src = processedSrc; 
+            modalImg.alt = results._embedded["wp:featuredmedia"][0].alt_text; 
         }
         span.onclick = function() {
             modal.style.display = "none";
@@ -48,7 +50,7 @@ async function getPost(){
         modal.onclick = function() {
             modal.style.display = "none";
         }
-    } catch {
+    } catch(error) {
         console.log (error);
     }
 }    

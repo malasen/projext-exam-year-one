@@ -21,11 +21,11 @@ async function getPost(postsUrl){
                                          <div class="featuredAuthor">By: ${results[i]._embedded.author[0].name}</div>
                                          <div class="featuredDate"><time>${results[i].date.split("T")} </time></div>
                                          <div class="featuredTags"></div>
-                                         <div class="featuredTitle"><h3>${results[i].title.rendered}</h3></div>
+                                         <div class="featuredTitle"> <h2>${results[i].title.rendered} </h2></div>
                                          <div class="featuredContent">${results[i].excerpt.rendered}</div>
-                                         <button class="call-to">Continue Reading</button>
                                          <div class="featuredImg" style="background-image:url('${results[i]._embedded["wp:featuredmedia"][0].source_url}')">
                                          </div>
+                                         <button class="call-to">Continue Reading</button>
                                          </a></div>
                                          ` 
             }    
